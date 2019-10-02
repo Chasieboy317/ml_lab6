@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "input.cpp"
+#include "perceptron.cpp"
 
 int main (int argc, char* argv []) {
 	std::ifstream ifs("input.txt");
