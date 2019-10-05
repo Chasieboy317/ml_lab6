@@ -14,6 +14,16 @@ class input {
 			w = 0;
 			s = x*w;
 		}
+
+		void setX(float x) {
+			this->x = x;
+			s = x*w;
+		}
+
+		void setW(float w) {
+			this->w = w;
+			s = x*w;
+		}
 };
 
 #endif
