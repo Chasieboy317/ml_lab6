@@ -31,7 +31,7 @@ class perceptron {
 			for (int i=0; i<x.size(); i++) {
 				sum +=x[i].x*x[i].w;	
 			}
-			std::cout<<"sum is: "<<sum<<std::endl;
+			//std::cout<<"sum is: "<<sum<<std::endl;
 			return sum > theta ? 1 : 0;
 		}
 
@@ -56,6 +56,7 @@ class perceptron {
 				while (O!=outputs[i]);
 				std::cout<<"learnt "<<outputs[i]<<" for: "<<inputs[count].x<<", "<<inputs[count+1].x<<std::endl;
 				count+=2;
+				std::cout<<std::endl;
 			}
 		}
 };
