@@ -1,0 +1,12 @@
+Q1:
+The minimun number of perceptrons required to solve this problem is 2. The output of the first should be used as the input to the second, in addition to the input data sets.
+
+Q2:
+
+x1 x2 AND OR XOR
+1  1  1   1  0
+1  0  0   1  1
+0  1  0   1  1
+0  0  0   0  0
+
+It only took 8 training examples. 4 for learning AND, and 4 for learning OR.
