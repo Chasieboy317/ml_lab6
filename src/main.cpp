@@ -21,7 +21,7 @@ perceptron learn(std::string filename) {
 
 	ifs.close();
 
-	perceptron p1(0);
+	perceptron p1(1.0f);
 	for (int i=0; i<4; i++) {
 		std::cout<<"inputs are: "<<x1[i].x<<" "<<x2[i].x<<" and the expected value is: "<<outputs[i]<<std::endl;
 		p1.inputs.push_back(x1[i]);
@@ -35,6 +35,6 @@ perceptron learn(std::string filename) {
 }
 
 int main (int argc, char* argv []) {
-	perceptron p1 = learn("and.txt");
-	//perceptron p2 = learn("or.txt");
+	//perceptron p1 = learn("and.txt");
+	perceptron p2 = learn("or.txt");
 }

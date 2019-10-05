@@ -21,8 +21,7 @@ class input {
 		}
 
 		void setW(float w) {
-			this->w = w;
-			s = x*w;
+			this->w=w;
 		}
 };
 

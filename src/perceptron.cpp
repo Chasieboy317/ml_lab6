@@ -17,7 +17,7 @@ class perceptron {
 			inputs.clear();
 			outputs.clear();
 		}
-		perceptron (float theta) {
+		perceptron (float theta): theta(theta) {
 			n = 0.1;
 		}
 
@@ -31,6 +31,7 @@ class perceptron {
 			for (int i=0; i<x.size(); i++) {
 				sum +=x[i].x*x[i].w;	
 			}
+			std::cout<<"sum is: "<<sum<<std::endl;
 			return sum > theta ? 1 : 0;
 		}
 
@@ -48,8 +49,8 @@ class perceptron {
 				do {
 					std::vector<input> temp {inputs[count], inputs[count+1]};
 					O = o(temp);
-					inputs[i].w = (updateW(inputs[count].w, outputs[i], O, inputs[count].x));
-					inputs[i+1].w = (updateW(inputs[count+1].w, outputs[i], O, inputs[count+1].x));
+					inputs[count].w = (updateW(inputs[count].w, outputs[i], O, inputs[count].x));
+					inputs[count+1].w = (updateW(inputs[count+1].w, outputs[i], O, inputs[count+1].x));
 					std::cout<<"output is: "<<O<<" and expected output is: "<<outputs[i]<<" for: "<<inputs[count].x<<", "<<inputs[count+1].x<<std::endl;
 				}
 				while (O!=outputs[i]);
